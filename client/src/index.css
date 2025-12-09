@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+*{
+  font-family: "Outfit",sans-serif;
+}
+
+@layer base{
+  button {
+    @apply cursor-pointer;
+  }
+  input:not([type="checkbox"]){
+    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg;
+  }
+  textarea {
+    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg resize-none;
+  }
+}
+
+/* In your global CSS file */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #resume-preview,
+  #resume-preview * {
+    visibility: visible;
+  }
+  
+  #resume-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
