@@ -2,7 +2,7 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://<your-github-username>.github.io/<repository-name>",
+  "homepage": "https://sandesh12345678.github.io/RESUME-BUILDER-AI",
 
   "type": "module",
   "scripts": {
