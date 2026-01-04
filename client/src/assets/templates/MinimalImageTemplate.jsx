@@ -9,7 +9,7 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
             month: "short",
         });
     };
-
+//localhost
     return (
         <div className="max-w-5xl mx-auto bg-white text-zinc-800">
             <div className="grid grid-cols-3">
