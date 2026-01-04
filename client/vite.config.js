@@ -5,5 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  base: "/RESUME-BUILDER-AI/"
+  base: "/"
 })
+
+//for git hub pages: base: "/RESUME-BUILDER-AI/"
