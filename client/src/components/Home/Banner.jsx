@@ -12,3 +12,5 @@ const Banner = () => {
 }
 
 export default Banner
+
+//adding comment
