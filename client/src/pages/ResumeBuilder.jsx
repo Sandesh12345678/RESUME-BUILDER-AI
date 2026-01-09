@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import {Link, useParams } from 'react-router-dom'
-import { useReactToPrint } from 'react-to-print';
 import { ArrowLeftIcon, Briefcase, ChevronLeft, ChevronRight, Download, DownloadIcon, EyeIcon, EyeOffIcon, FileText, FolderIcon, GraduationCap, Share2Icon, Sparkles, User } from 'lucide-react'
 import PersonalInfoForm from '../components/PersonalInfoForm'
 import ResumePreview from '../components/ResumePreview'
@@ -37,10 +36,7 @@ const ResumeBuilder = () => {
     public: false,
   })
 
-  const handleDownload = useReactToPrint({
-  content: () => resumeRef.current,
-  documentTitle: resumeData.title || "Resume",
-});
+
 
   const loadExistingResume = async () => {
     try {
@@ -96,6 +92,10 @@ const ResumeBuilder = () => {
     }else{
       alert('Share not supported on this browser.')
     }
+  }
+
+  const downloadResume = ()=>{
+    window.print();
   }
 
   const saveResume = async () =>{
@@ -200,7 +200,7 @@ const ResumeBuilder = () => {
                     {resumeData.public ? 'Public' : 'Private'}
                   </button>
                   <button
-  onClick={handleDownload}
+  onClick={downloadResume}
   className="flex items-center gap-2 px-6 py-2 text-xs bg-gradient-to-br from-green-100 to-green-200 text-green-600 ring-green-300 rounded-lg hover:ring transition-colors"
 >
   <DownloadIcon className="size-4" /> Download
