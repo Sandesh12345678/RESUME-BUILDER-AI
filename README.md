@@ -3,8 +3,7 @@ Build stunning, ATS-friendly resumes with AI-powered enhancements
 A modern web app that transforms your resume creation experience.
 
 🚀 Live Demo
-(https://sandesh12345678.github.io/RESUME-BUILDER-AI/)
-
+(https://resume-builder-ai-frontend.onrender.com)
 ✨ Key Features
 🤖 AI-Powered Enhancements – Improve job descriptions, personal info, and content using OpenAI
 
