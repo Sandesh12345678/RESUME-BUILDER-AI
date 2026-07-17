@@ -8,7 +8,8 @@ const connectDB = async () =>{
         const projectName = 'resume-builder';
 
         if(!mongodbURI){
-            throw new Error("MONGODB_URI environment variable not set")
+            console.warn("MONGODB_URI is not set. Server will start without a database connection.");
+            return;
         }
 
         if(mongodbURI.endsWith('/')){
